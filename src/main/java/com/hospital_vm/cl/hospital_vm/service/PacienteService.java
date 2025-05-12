@@ -16,10 +16,12 @@ public class PacienteService {
     private PacienteRepository pacienteRepository;
 
     public List<Paciente> findAll() {
+
         return pacienteRepository.findAll();
     }
 
     public Paciente findById(Long id) {
+
         return pacienteRepository.findById(id).get();
     }
 
@@ -29,7 +31,11 @@ public class PacienteService {
     }
 
     public void delete(Long id){
+
         pacienteRepository.deleteById(id);
     }
 
+    public Paciente getPacienteById(Long pacienteId) {
+        return null;
+    }
 }
